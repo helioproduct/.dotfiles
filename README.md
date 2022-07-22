@@ -1,0 +1,2 @@
+# .dotfiles
+Manjaro configuraion files
