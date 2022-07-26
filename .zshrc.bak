@@ -1,6 +1,5 @@
 # .zhrc standard Manjaro configuration
 
-
 # Use powerline
 USE_POWERLINE="true"
 # Source manjaro-zsh-configuration
