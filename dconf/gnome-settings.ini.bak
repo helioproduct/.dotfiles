@@ -7,7 +7,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='multitasking'
+last-panel='universal-access'
 window-state=(980, 640, false)
 
 [org/gnome/deja-dup]
@@ -52,19 +52,13 @@ text-scaling-factor=1.1000000000000001
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['gnome-power-panel', 'telegramdesktop', 'org-gnome-nautilus', 'org-gnome-gedit', 'org-manjaro-pamac-manager']
+application-children=['gnome-power-panel', 'telegramdesktop', 'org-gnome-nautilus']
 
 [org/gnome/desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
 
-[org/gnome/desktop/notifications/application/org-gnome-gedit]
-application-id='org.gnome.gedit.desktop'
-
 [org/gnome/desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
-
-[org/gnome/desktop/notifications/application/org-manjaro-pamac-manager]
-application-id='org.manjaro.pamac.manager.desktop'
 
 [org/gnome/desktop/notifications/application/telegramdesktop]
 application-id='telegramdesktop.desktop'
@@ -84,10 +78,6 @@ show-desktop=['<Super>d']
 migrated=true
 network-monitor-gio-name=''
 
-[org/gnome/file-roller/dialogs/extract]
-recreate-folders=true
-skip-newer=false
-
 [org/gnome/file-roller/listing]
 list-mode='as-folder'
 name-column-width=250
@@ -106,7 +96,7 @@ active-plugins=['docinfo', 'sort', 'filebrowser', 'openlinks', 'modelines', 'spe
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/helio/rustdesk'
+virtual-root='file:///run/media/helio/767A-413A'
 
 [org/gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
@@ -155,12 +145,9 @@ home=['<Control><Alt>e']
 
 [org/gnome/shell]
 app-picker-layout=[{'org.gnome.Geary.desktop': <{'position': <0>}>, 'accessories': <{'position': <1>}>, 'games': <{'position': <2>}>, 'gnome-appfolders-manager.desktop': <{'position': <3>}>, 'org.gnome.gThumb.desktop': <{'position': <4>}>, 'gnome-layouts.desktop': <{'position': <5>}>, 'org.gnome.Lollypop.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'manjaro-documentation.desktop': <{'position': <8>}>, 'office': <{'position': <9>}>, 'simple-scan.desktop': <{'position': <10>}>, 'system-tools': <{'position': <11>}>, 'webapp-manager.desktop': <{'position': <12>}>, 'org.gnome.Cheese.desktop': <{'position': <13>}>, 'telegramdesktop.desktop': <{'position': <14>}>, 'code_code.desktop': <{'position': <15>}>}]
-enabled-extensions=['pamac-updates@manjaro.org', 'dash-to-dock@micxgx.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'gnome-ui-tune@itstime.tech', 'legacyschemeautoswitcher@joshimukul29.gmail.com', 'x11gestures@joseexposito.github.io', 'ding@rastersoft.com']
+enabled-extensions=['pamac-updates@manjaro.org', 'dash-to-dock@micxgx.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'gnome-ui-tune@itstime.tech', 'legacyschemeautoswitcher@joshimukul29.gmail.com', 'x11gestures@joseexposito.github.io', 'desktop-icons@csoriano']
 favorite-apps=['google-chrome.desktop', 'firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.gedit.desktop', 'org.gnome.Terminal.desktop', 'org.manjaro.pamac.manager.desktop']
 welcome-dialog-last-shown-version='42.3.1'
-
-[org/gnome/shell/app-switcher]
-current-workspace-only=true
 
 [org/gnome/shell/world-clocks]
 locations=@av []
@@ -177,32 +164,5 @@ font='JetBrains Mono NL 14'
 [org/gnome/tweaks]
 show-extensions-notice=false
 
-[org/gtk/gtk4/settings/file-chooser]
-date-format='regular'
-location-mode='path-bar'
-show-hidden=false
-show-size-column=true
-show-type-column=true
-sidebar-width=187
-sort-column='name'
-sort-directories-first=false
-sort-order='ascending'
-type-format='category'
-window-size=(926, 374)
-
 [org/gtk/settings/file-chooser]
-date-format='regular'
-location-mode='path-bar'
-show-hidden=false
-show-size-column=true
-show-type-column=true
-sidebar-width=184
-sort-column='name'
-sort-directories-first=true
-sort-order='ascending'
-type-format='category'
-window-position=(236, 35)
-window-size=(1449, 998)
-
-[org/gtkhash/plugin]
-hash-functions=['MD5', 'SHA1', 'SHA256', 'CRC32']
+show-hidden=true
