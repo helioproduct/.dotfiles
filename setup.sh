@@ -46,6 +46,9 @@ function installPackages
 {
 	sudo pacman --sync --refresh --sysupgrade	
 	sudo pacman -S - < packagesList
+	enableSnapd
+	sudo snap install code --classic
+	pamac build google-chrome
 }
 
 function askForInstall
