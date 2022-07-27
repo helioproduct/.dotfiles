@@ -2,6 +2,9 @@
 Manjaro configuraion files
 
 
+
+```sh
+
 ██████████████████  ████████   helio@helioPC  
 ██████████████████  ████████   -------------  
 ██████████████████  ████████   OS: Manjaro Linux x86_64  
@@ -20,5 +23,6 @@ Manjaro configuraion files
                                CPU: *******************  
                                GPU: *******************  
                                Memory: 2803MiB / 15395MiB  
+ ```
 
-
+ 
