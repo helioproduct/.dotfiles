@@ -12,8 +12,7 @@ function installFont
 {
 	mkdir ~/.fonts
 	mv ./JetBrainsMono/fonts/ttf/*.ttf ~/.fonts
-	echo -e "$(tput setaf 2) \nJetBrainsMono installed!\n" 
-	# echo -e "\nJetBrainsMono installed!\n"
+	echo -e "$(tput setaf 2)\nJetBrainsMono installed!\n$(tput sgr0)"
 	rm -r JetBrainsMono
 }
 
@@ -23,9 +22,29 @@ function makeSymbolicsLinks
 	ln -s ./.dotfiles/.bashrc ~/.bashrc
 }
 
+function addRussianLayout
+{
+	echo -e "\n"
+	read -p "Add russian layout? [y/n]: " yn
+
+	case $yn in 
+		[yY] )
+			cat ./dconf/russian-layout.ini >> ./dconf/gnome-settings.ini;;
+		
+		[nN] ) ;;
+		
+		* ) echo "invalid response";
+			addRussianLayout;;
+	esac
+}
+
 function loadGnomeSettings
 {
-	dconf load / < ./dconf-seetings/gnome-seetings.ini
+	dconf dump / > ./dconf/gnome-settings.ini
+	cat ./dconf/new-settings.ini >> ./dconf/gnome-settings.ini
+	addRussianLayout
+	dconf load / < ./dconf/gnome-settings.ini
+	rm ./dconf/gnome-settings.ini
 }
 
 function enableSnapd	
@@ -51,33 +70,46 @@ function installPackages
 	pamac build google-chrome
 }
 
+function finish
+{
+	if ! command -v neofetch &> /dev/null
+	then
+    	echo "<the_command> could not be found"
+	fi
+	neofetch
+	echo -e "$(tput setaf 2)\nFinished!\n$(tput sgr0)"
+	exit
+}
+
 function askForInstall
 {
 	echo -e "\n"
 	read -p "Install default packages? (packageList)[y/n]: " yn
+	echo -e "\n"
 
 	case $yn in 
-		[yY] ) echo -e "Installing packages...\n";
-			   installPackages;;
-			   # neofetch;;
-
-		[nN] ) 	echo -e "$(tput setaf 2)\nFinished!\n";; #echo -e "\nFinished!\n";;
-
+		[yY] ) # echo -e "Installing packages...\n"
+			installPackages
+			finish;;
+		[nN] ) 	finish;;
 		* ) echo "invalid response";
 			askForInstall;;
 	esac
+	
+	finish
 }
 
 function runSetup
 {
-	echo -e "\nRunning setup...\n"
+	echo -e "$(tput setaf 2)\nRunning setup...\n$(tput sgr0)"
 
 	dowloadFont
 	installFont
-
-	makeSymbolicsLinks
+	makeSymbolicsLinks	
 	loadGnomeSettings
+	enableExtenstions
 	askForInstall
+	finish
 }
 
 runSetup
