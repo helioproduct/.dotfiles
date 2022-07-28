@@ -25,4 +25,4 @@ Manjaro configuraion files
                                Memory: 2803MiB / 15395MiB  
  ```
 
- 
+![Alt text](./screenshots/neofetch.png/ "Result")
