@@ -1,4 +1,4 @@
-# .dotfiles
+# .dotfiles for Manjaro-linux on Gnome
 Manjaro configuraion files
 
 ### Install:
