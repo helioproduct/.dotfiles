@@ -68,6 +68,7 @@ function installPackages
 	enableSnapd
 	sudo snap install code --classic
 	pamac build google-chrome
+	sudo snap install sublime-text --classic
 }
 
 function finish
