@@ -82,6 +82,18 @@ function finish
 	exit
 }
 
+function installGo
+{
+	# Download Go
+	wget https://go.dev/dl/go1.19.linux-amd64.tar.gz
+	# Remove any previous Go installation
+	sudo rm -rf /usr/local/go
+	# Install Go
+	tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz
+	echo -e '\nGoPath' >> .zshrc
+	echo 'export PATH=$PATH:/usr/local/go/bin' >> .zshrc 
+}
+
 function askForInstall
 {
 	echo -e "\n"

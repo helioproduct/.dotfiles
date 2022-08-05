@@ -1,4 +1,4 @@
-# Open file from prompt: open file_name
+# Usage: open file_name
 function open () {
   xdg-open "$@">/dev/null 2>&1
 }
@@ -21,7 +21,7 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
-alias l='ls -a'
+# alias l='ls -a'
 alias ll='ls -l'
 alias la='ls -la'
 
@@ -44,3 +44,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Golang-Path
+export PATH=$PATH:/usr/local/go/bin
+
