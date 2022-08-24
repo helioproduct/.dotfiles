@@ -25,10 +25,6 @@ fi
 alias ll='ls -l'
 alias la='ls -la'
 
-# cat -> bat
-sudo pacman -S bat
-alias cat='bat --paging=never'
-
 # >>> conda initialize START >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/helio/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
