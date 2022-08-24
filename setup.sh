@@ -94,6 +94,12 @@ function installGo
 	echo 'export PATH=$PATH:/usr/local/go/bin' >> .zshrc 
 }
 
+function configBat
+{
+	echo "# cat-> bat" >> ./.zshrc
+	echo "alias cat='bat --paging=never'" >> ./.zshrc	
+}
+
 function askForInstall
 {
 	echo -e "\n"
@@ -103,6 +109,7 @@ function askForInstall
 	case $yn in 
 		[yY] ) # echo -e "Installing packages...\n"
 			installPackages
+			configBat
 			finish;;
 		[nN] ) 	finish;;
 		* ) echo "invalid response";
@@ -115,7 +122,7 @@ function askForInstall
 function runSetup
 {
 	echo -e "$(tput setaf 2)\nRunning setup...\n$(tput sgr0)"
-
+	
 	dowloadFont
 	installFont
 	makeSymbolicsLinks	

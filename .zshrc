@@ -65,3 +65,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# cat-> bat
+alias cat='bat --paging=never'
+# cat-> bat
+alias cat='bat --paging=never'
+# cat-> bat
+alias cat='bat --paging=never'
