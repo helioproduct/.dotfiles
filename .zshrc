@@ -26,7 +26,7 @@ alias ll='ls -l'
 alias la='ls -la'
 
 # cat -> bat
-sudo pacman -S batw
+sudo pacman -S bat
 alias cat='bat --paging=never'
 
 # >>> conda initialize START >>>
