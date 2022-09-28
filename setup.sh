@@ -126,10 +126,10 @@ function runSetup
 	dowloadFont
 	installFont
 	makeSymbolicsLinks	
-	loadGnomeSettings
+  loadGnomeSettings
 	enableExtenstions
 	askForInstall
-	finish
+  finish
 }
 
 runSetup
