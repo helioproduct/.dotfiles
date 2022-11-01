@@ -21,7 +21,7 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
-# alias l='ls -a'
+alias l='ls -a'
 alias ll='ls -l'
 alias la='ls -la'
 
