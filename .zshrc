@@ -71,3 +71,6 @@ alias cat='bat --paging=never'
 alias cat='bat --paging=never'
 # cat-> bat
 alias cat='bat --paging=never'
+
+# open new terminal tabs/windows in the previous directory
+source /etc/profile.d/vte.sh
