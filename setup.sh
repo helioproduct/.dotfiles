@@ -61,14 +61,18 @@ function enableExtenstions
 	gnome-extensions enable "ding@rastersoft.com"
 }
 
+function installFirefoxGnomeTheme
+{
+	curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
+}
+
 function installPackages
 {
 	sudo pacman --sync --refresh --sysupgrade	
 	sudo pacman -S - < packagesList
+	installFirefoxGnomeTheme
 	enableSnapd
 	sudo snap install code --classic
-	pamac build google-chrome
-	sudo snap install sublime-text --classic
 }
 
 function finish
